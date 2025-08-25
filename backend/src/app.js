@@ -8,8 +8,10 @@ app.use(cors());
 
 
 
-const authRoutes = require("./routes/authRoutes");
+// const authRoutes = require("./routes/authRoutes");
 
-app.use("/auth", authRoutes);
+app.use('/', (req, res) => {
+    res.send({message: 'API rondando'})
+});
 
 module.exports = app;
