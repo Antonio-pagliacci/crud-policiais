@@ -3,6 +3,7 @@ import { TabelaPoliciaisComponent } from './page/tabela-policiais/tabela-policia
 import { CadastroPoliciaisComponent } from './page/cadastro-policiais/cadastro-policiais.component';
 
 export const routes: Routes = [
-    {path: '', component: TabelaPoliciaisComponent},
-    {path: 'cadastro', component: CadastroPoliciaisComponent}
+     { path: '', redirectTo: 'tabela-policiais', pathMatch: 'full' },
+  { path: 'cadastro', component: CadastroPoliciaisComponent },
+  { path: 'tabela-policiais', component: TabelaPoliciaisComponent },
 ];
