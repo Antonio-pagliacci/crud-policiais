@@ -1,0 +1,45 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #3092f4; /* azul escuro */
+  color: #0f0f0f; /* branco */
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header h2 {
+  font-size: 1.8rem; /* tamanho grande */
+  margin-bottom: 10px;
+}
+
+.header h4 {
+  font-size: 1.2rem; /* tamanho menor */
+  font-weight: normal;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 1.5rem;
+  }
+  .header h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px 10px;
+  }
+  .header h2 {
+    font-size: 1.2rem;
+  }
+  .header h4 {
+    font-size: 0.9rem;
+  }
+}
