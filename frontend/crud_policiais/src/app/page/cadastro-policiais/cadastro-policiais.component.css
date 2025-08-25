@@ -1,0 +1,67 @@
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f9ff; /* fundo suave */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #003366; /* azul do header */
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #003366;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 51, 102, 0.5);
+}
+
+button.btn.cadastrar {
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+button.btn.cadastrar:hover {
+  background-color: #001f4d; /* azul mais escuro ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  input, button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

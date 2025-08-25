@@ -1,23 +1,24 @@
 <div class="container">
-    <h1>Policiais</h1>
-    <input [(ngModel)]="policial.id" placeholder="Id">
-    <input [(ngModel)]="policial.rg_civil" placeholder="rg_civil" >
-    <!-- <button class="btn cadastrar" (click)="salvar()">{{editando ? 'Atualizar': 'Cadastrar'}}</button> -->
-<table>
+  <h1>Lista de Policiais cadastrados</h1>
+
+  <button class="btn cadastrar" [routerLink]="['/cadastro']">
+    Cadastrar Novo Policial
+  </button>
+
+  <table>
     <tr>
-        <th>Id</th>
-        <th>RG Civil</th>
-        <th>Rg Militar</th>
+      <th>Id</th>
+      <th>RG Civil</th>
+      <th>RG Militar</th>
+      <th>CPF</th>
+      <th>Data de nascimento</th>
     </tr>
     <tr *ngFor="let policial of policiais">
-        <td>{{policial.id}}</td>
-        <td>{{policial.rg_civil}}</td>
-        <td>
-            <!-- <button class="btn editar" (click)="editar(policial)">Editar</button> -->
-            <!-- <button class="btn excluir" (click)="excluir(policial.id!)">Excluir</button> -->
-        </td>
+      <td data-label="Id">{{policial.id}}</td>
+      <td data-label="RG Civil">{{policial.rg_civil}}</td>
+      <td data-label="RG Militar">{{policial.rg_militar}}</td>
+      <td data-label="CPF">{{policial.cpf}}</td>
+      <td data-label="Data de nascimento">{{policial.data_nascimento}}</td>
     </tr>
-    
-
-</table>
+  </table>
 </div>

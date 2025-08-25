@@ -1,1 +1,65 @@
-<p>cadastro-policiais works!</p>
+<div class="container">
+  <h1>Cadastro de Policiais</h1>
+
+  <form #formPolicial="ngForm" (ngSubmit)="create()">
+    <input
+      name="rg_civil"
+      [(ngModel)]="policial.rg_civil"
+      placeholder="RG Civil"
+      required
+    />
+    <div *ngIf="formPolicial.submitted && !policial.rg_civil" class="error">
+      RG Civil é obrigatório
+    </div>
+
+    <input
+      name="rg_militar"
+      [(ngModel)]="policial.rg_militar"
+      placeholder="RG Militar"
+      required
+    />
+    <div *ngIf="formPolicial.submitted && !policial.rg_militar" class="error">
+      RG Militar é obrigatório
+    </div>
+
+    <input
+      name="cpf"
+      [(ngModel)]="policial.cpf"
+      placeholder="CPF (apenas números)"
+      required
+      (blur)="validar()"
+    />
+    <div *ngIf="cpfInvalido" class="error">CPF inválido</div>
+
+    <div *ngIf="formPolicial.submitted && cpfInvalido" class="error">
+      CPF inválido ou obrigatório
+    </div>
+
+    <input
+      name="data_nascimento"
+      [(ngModel)]="policial.data_nascimento"
+      placeholder="Data de Nascimento (YYYY-MM-DD)"
+      required
+    />
+    <div
+      *ngIf="formPolicial.submitted && !policial.data_nascimento"
+      class="error"
+    >
+      Data de nascimento é obrigatória
+    </div>
+
+    <input
+      name="matricula"
+      [(ngModel)]="policial.matricula"
+      placeholder="Matrícula"
+      required
+    />
+    <div *ngIf="formPolicial.submitted && !policial.matricula" class="error">
+      Matrícula é obrigatória
+    </div>
+
+    <button class="btn cadastrar" type="submit">
+      {{ editando ? "Atualizar" : "Cadastrar" }}
+    </button>
+  </form>
+</div>

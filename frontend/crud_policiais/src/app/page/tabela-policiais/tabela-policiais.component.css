@@ -1,0 +1,88 @@
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #003366; /* azul */
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #003366; /* azul do header */
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0e7ff;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* esconde o cabeçalho padrão */
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  td {
+    padding: 10px;   
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    content: attr(data-label);
+  }
+}
+
+.btn.cadastrar {
+  background-color: #003366; /* azul */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn.cadastrar:hover {
+  background-color: #001f4d; /* azul mais escuro no hover */
+}

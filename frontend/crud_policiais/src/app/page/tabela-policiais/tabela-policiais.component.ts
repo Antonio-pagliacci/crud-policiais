@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component , OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PoliciaisService, Policiais } from '../../service/policiais.service';
+import { RouterLink } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-tabela-policiais',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './tabela-policiais.component.html',
   styleUrl: './tabela-policiais.component.css'
 })
