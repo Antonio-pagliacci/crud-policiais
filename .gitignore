@@ -1,0 +1,11 @@
+# Ignorar .env apenas dentro da pasta backend
+/backend/.env
+
+# Ignorar node_modules das duas pastas
+/backend/node_modules/
+/frontend/node_modules/
+
+# Logs e arquivos de sistema (opcional, mas recomendado)
+*.log
+logs/
+.DS_Store
