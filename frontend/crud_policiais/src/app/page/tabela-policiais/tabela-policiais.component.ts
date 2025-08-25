@@ -23,4 +23,12 @@ policial: Policiais = { rg_civil: '', rg_militar: '', cpf: '', data_nascimento: 
 listar(){
   this.service.getPoliciais().subscribe((data => (this.policiais = data)))
 }
+formatarData(data: string): string {
+  const d = new Date(data);
+  const dia = String(d.getDate()).padStart(2, '0');
+  const mes = String(d.getMonth() + 1).padStart(2, '0'); // Janeiro = 0
+  const ano = d.getFullYear();
+  return `${dia}/${mes}/${ano}`;
+}
+
 }

@@ -1,10 +1,16 @@
 <div class="container">
+  <button class="btn listar" [routerLink]="['']">
+   Lista de policiais
+  </button>
+  <div class="form-container">
+    <h1>Cadastro de Policiais</h1>
   <input [(ngModel)]="policial.rg_civil" placeholder="Rg civil" />
   <input [(ngModel)]="policial.rg_militar" placeholder="Rg Militar" />
   <input [(ngModel)]="policial.cpf" placeholder="CPF" />
-  <input [(ngModel)]="policial.data_nascimento" placeholder="Data nascimento" />
+  <input [(ngModel)]="policial.data_nascimento" placeholder="Data nascimento (AAA-MM-DD)" />
  
   <button class="btn cadastrar" (click)="create()">
    Cadastrar
   </button>
+  </div>
 </div>
