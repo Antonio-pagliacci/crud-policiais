@@ -9,14 +9,14 @@ const connection = mysql.createConnection({
   port: process.env.DB_PORT || 3306
 });
 
-console.log('usuario' , process.env.DB_USER);
+
 
 connection.connect((err) => {
   if (err) {
     console.error('Erro ao conectar no MySQL:', err);
     return;
   }
-  console.log('Conexão com o banco de dados!');
+  console.log('Conectado ao banco de dados MYSQL!');
 });
 
 module.exports = connection;

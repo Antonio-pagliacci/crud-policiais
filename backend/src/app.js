@@ -8,10 +8,8 @@ app.use(cors());
 
 
 
-// const authRoutes = require("./routes/authRoutes");
+const policiaisRouter = require("./routes/policiais.Router");
 
-app.use('/', (req, res) => {
-    res.send({message: 'API rondando'})
-});
+app.use('/', policiaisRouter)
 
 module.exports = app;
